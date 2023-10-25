@@ -69,3 +69,38 @@ a:hover {
   margin-bottom: auto;
   margin-right: 5px;
 }
+
+.ownComment {
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: solid 1px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.ownCommentInput {
+  width: 98%;
+  height: 90%;
+  object-fit: contain;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.submitComment {
+  height: 50%;
+  margin-top: auto;
+  margin-right: 10px;
+  margin-bottom: auto;
+  width: 10%;
+}
+
+.popup {
+  margin: auto;
+}

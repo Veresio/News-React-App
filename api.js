@@ -26,3 +26,10 @@ export function updateArticleVotes(id, voteValue) {
     inc_votes: voteValue,
   });
 }
+
+export function createNewComment(id, comment, user) {
+  return axios.post(
+    `https://news-api-f5ap.onrender.com/api/articles/${id}/comments`,
+    { body: comment, username: user }
+  );
+}
