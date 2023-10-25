@@ -49,3 +49,23 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+.commentSection {
+  margin-right: auto;
+  width: 70%;
+}
+.commentCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  border: solid 1px;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.votes {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+}
