@@ -10,3 +10,7 @@ export function fetchAllTopics() {
 export function fetchAllArticles() {
   return axios.get("https://news-api-f5ap.onrender.com/api/articles");
 }
+
+export function fetchArticleById(id) {
+  return axios.get(`https://news-api-f5ap.onrender.com/api/articles/${id}`);
+}
