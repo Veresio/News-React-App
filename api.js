@@ -14,3 +14,9 @@ export function fetchAllArticles() {
 export function fetchArticleById(id) {
   return axios.get(`https://news-api-f5ap.onrender.com/api/articles/${id}`);
 }
+
+export function fetchCommentsByArticleId(id) {
+  return axios.get(
+    `https://news-api-f5ap.onrender.com/api/articles/${id}/comments`
+  );
+}

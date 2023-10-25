@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticleById } from "../api";
+import CommentSection from "./CommentSection";
 
 function ArticlePage() {
   const { id } = useParams();
@@ -23,13 +24,13 @@ function ArticlePage() {
       <img src={article.article_img_url}></img>
       <div className="bodyContainer">
         <p>{article.body}</p>
-        <form>
+        <form className="votes">
           <button>↑</button>
           <p>{article.votes}</p>
           <button>↓</button>
         </form>
       </div>
-      <div className="commentSection"></div>
+      <CommentSection id={id} />
     </>
   );
 }
