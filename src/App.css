@@ -15,7 +15,37 @@
   justify-content: space-evenly;
 }
 
+h1 {
+  text-align: center;
+}
+
 img {
   object-fit: contain;
   border-radius: 25px;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bodyContainer {
+  width: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -16,7 +16,8 @@ function Home() {
   if (isLoading === true) return <p>Loading...</p>;
   return (
     <>
-      <h1>Articles</h1>
+      <h1>Home</h1>
+      <h2>Articles</h2>
       <div className="articlesContainer">
         {articleList.map((article) => {
           return <ArticleCard key={article.title} article={article} />;
