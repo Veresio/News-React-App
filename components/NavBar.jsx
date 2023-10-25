@@ -26,7 +26,11 @@ function NavBar() {
         <select onChange={handleDropDown} name="topics" id="topics">
           <option value="All topics">All topics</option>
           {topicsList.map((topic) => {
-            return <option value={topic.slug}>{topic.slug}</option>;
+            return (
+              <option key={topic.slug} value={topic.slug}>
+                {topic.slug}
+              </option>
+            );
           })}
         </select>
       </form>
