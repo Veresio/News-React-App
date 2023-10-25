@@ -1,0 +1,21 @@
+.articleCard {
+  border: solid 1px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 30%;
+  margin: 2px;
+}
+
+.articlesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+img {
+  object-fit: contain;
+  border-radius: 25px;
+}
