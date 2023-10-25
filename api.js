@@ -20,3 +20,9 @@ export function fetchCommentsByArticleId(id) {
     `https://news-api-f5ap.onrender.com/api/articles/${id}/comments`
   );
 }
+
+export function updateArticleVotes(id, voteValue) {
+  return axios.patch(`https://news-api-f5ap.onrender.com/api/articles/${id}`, {
+    inc_votes: voteValue,
+  });
+}
