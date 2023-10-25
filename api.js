@@ -7,8 +7,12 @@ export function fetchAllTopics() {
   return axios.get("https://news-api-f5ap.onrender.com/api/topics");
 }
 
-export function fetchAllArticles() {
-  return axios.get("https://news-api-f5ap.onrender.com/api/articles");
+export function fetchAllArticles(topic) {
+  if (topic) {
+    return axios.get(
+      `https://news-api-f5ap.onrender.com/api/articles?topic=${topic}`
+    );
+  } else return axios.get("https://news-api-f5ap.onrender.com/api/articles");
 }
 
 export function fetchArticleById(id) {
