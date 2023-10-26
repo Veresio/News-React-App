@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchArticleById, updateArticleVotes } from "../api";
 import CommentSection from "./CommentSection";
 
-function ArticlePage() {
+function ArticlePage({ user }) {
   const { id } = useParams();
   const [article, setArticle] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -77,7 +77,7 @@ function ArticlePage() {
           </button>
         </form>
       </div>
-      <CommentSection id={id} />
+      <CommentSection id={id} user={user} />
     </>
   );
 }
