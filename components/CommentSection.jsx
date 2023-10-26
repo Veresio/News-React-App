@@ -64,8 +64,17 @@ function CommentSection({ id, user }) {
           </div>
         ) : null}
       </form>
-      {commentsList.map((comment) => {
-        return <CommentCard comment={comment} key={comment.id} />;
+      {commentsList.map((comment, index) => {
+        return (
+          <CommentCard
+            comment={comment}
+            key={comment.id}
+            user={user}
+            commentsList={commentsList}
+            setCommentsList={setCommentsList}
+            index={index}
+          />
+        );
       })}
     </div>
   );

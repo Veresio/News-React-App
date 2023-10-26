@@ -37,3 +37,7 @@ export function createNewComment(id, comment, user) {
     { body: comment, username: user }
   );
 }
+
+export function deleteCommentById(id) {
+  return axios.delete(`https://news-api-f5ap.onrender.com/api/comments/${id}`);
+}
