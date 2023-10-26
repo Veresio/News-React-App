@@ -11,10 +11,14 @@ function CommentSection({ id }) {
   const username = "cooljmessy"; //not sure if we're meant to take a username or just use an existing one, code should be 95% the same
   useEffect(() => {
     setIsLoading(true);
-    fetchCommentsByArticleId(id).then(({ data: { comments } }) => {
-      setCommentsList(comments);
-      setIsLoading(false);
-    });
+    fetchCommentsByArticleId(id)
+      .then(({ data: { comments } }) => {
+        setCommentsList(comments);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        if ((err.status = 404)) setIsLoading(false);
+      });
   }, [id]);
   function handleNewComment(e) {
     e.preventDefault();
@@ -65,9 +69,13 @@ function CommentSection({ id }) {
           </div>
         ) : null}
       </form>
-      {commentsList.map((comment) => {
-        return <CommentCard comment={comment} key={comment.id} />;
-      })}
+      {commentsList ? (
+        commentsList.map((comment) => {
+          return <CommentCard comment={comment} key={comment.id} />;
+        })
+      ) : (
+        <p>Be the first to comment on this article</p>
+      )}
     </div>
   );
 }
