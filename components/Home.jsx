@@ -61,6 +61,11 @@ function Home() {
           return Number(b.votes) - Number(a.votes);
         });
         setArticleList(sortingArr);
+      } else if (sort === "date") {
+        sortingArr.sort((a, b) => {
+          return new Date(b.created_at) - new Date(a.created_at);
+        });
+        setArticleList(sortingArr);
       }
     }
     console.log(articleList);
